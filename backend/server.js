@@ -5,7 +5,8 @@ const mongoose = require("mongoose");
 const app = express();
 
 // iniciando o bd
-mongoose.connect("mongodb+srv://starter:starter@cluster0-kj5ow.mongodb.net/starter?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://starter:starter@cluster0-kj5ow.mongodb.net/starter?retryWrites=true&w=majority",
+{useNewUrlParser:true, useUnifiedTopology:true});
 
 //rotas
 app.get("/", (req, res) => {
