@@ -1,15 +1,9 @@
 const express = require("express");
 const routes = express.Router();
 
-//rotas
-routes.get("/", (req, res) => {
-    Product.create({
-        title: "Starter now",
-        description: "Descrição geral",
-        url: "http://google.com"
-    });
+const ProductController = require("./controllers/ProductController");
 
-    res.send("Hello starter !");
-});
+//rotas
+routes.get("/products", ProductController.index);
 
 module.exports = routes;

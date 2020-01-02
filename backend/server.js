@@ -13,9 +13,7 @@ mongoose.connect("mongodb+srv://starter:starter@cluster0-kj5ow.mongodb.net/start
 
 requireDir("./src/models");
 
-const Product = mongoose.model("Product");
-
 // Rotas
-app.use("/", require("./src/routes"));
+app.use("/api", require("./src/routes"));
 
 app.listen(3001);
