@@ -15,15 +15,7 @@ requireDir("./src/models");
 
 const Product = mongoose.model("Product");
 
-//rotas
-app.get("/", (req, res) => {
-    Product.create({
-        title: "Starter now",
-        description: "Descrição geral",
-        url: "http://google.com"
-    });
-
-    res.send("Hello starter !");
-});
+// Rotas
+app.use("/", require("./src/routes"));
 
 app.listen(3001);
