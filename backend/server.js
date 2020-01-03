@@ -4,12 +4,11 @@ const requireDir = require("require-dir");
 
 // iniciando o app
 const app = express();
+app.use(express.json());
 
 // iniciando o bd
 mongoose.connect("mongodb+srv://starter:starter@cluster0-kj5ow.mongodb.net/starter?retryWrites=true&w=majority"
-    , {useNewUrlParser : true
-        , useUnifiedTopology : true
-    });
+    , { useNewUrlParser: true, useUnifiedTopology: true });
 
 requireDir("./src/models");
 
