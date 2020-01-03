@@ -1,18 +1,28 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import api from '../../services/api';
 
 export default class Main extends Component {
-    componentDidMount(){
+    state = {
+        products: []
+    };
+
+    componentDidMount() {
         this.loadProducts();
     }
 
     loadProducts = async () => {
-        const response = await api.get('/products');
+        const response = await api.get('/api/products');
 
-        console.log(pro)
+        this.setState({ products: response.data.products.docs });
     };
 
     render() {
-        return <h1>Hello</h1>;
+        return (
+            <div className="product-list">
+                {this.state.products.map(product => (
+                    <h2 key={product._id}>{product.title}</h2>
+                ))}
+            </div>
+        );
     }
 }
