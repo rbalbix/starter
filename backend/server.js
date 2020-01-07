@@ -12,7 +12,12 @@ app.use(cors());
 
 // iniciando o bd
 mongoose.connect("mongodb+srv://starter:starter@cluster0-kj5ow.mongodb.net/starter?retryWrites=true&w=majority"
-    , { useNewUrlParser: true, useUnifiedTopology: true });
+    , { useNewUrlParser: true, useUnifiedTopology: true })
+    .then (() => {
+        console.log("Connected.");
+    }).catch(e => {
+        console.log(`ERROR: ${e}` );
+    });
 
 requireDir("./src/models");
 
