@@ -10,6 +10,8 @@ Starter
   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/rbalbix/starter">
 
   <img alt="Repository issues" src="https://img.shields.io/github/issues/rbalbix/starter">
+  
+  <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/rbalbix/starter">
 
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 
