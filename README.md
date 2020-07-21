@@ -12,6 +12,9 @@ Starter
   <img alt="Repository issues" src="https://img.shields.io/github/issues/rbalbix/starter">
 
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
+
+  <img alt="License" src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg">
+  
 </p>
 
 <p align="center">
